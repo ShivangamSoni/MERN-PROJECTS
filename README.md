@@ -1,5 +1,11 @@
-# React Projects
+# React Starter Template
 
-Some are Learning Tutorial Projects &amp; Some are My Personal Projects
+We can create a starter React Template using:
 
-All the Projects are created in different branches
+```bash
+$ npx create-react-app <app-name-location>
+```
+
+But the problem with above is that it comes with a lot of Broiler-Plate Code.
+
+So, this Brach Contains the Absolute Basic React Template Without most of the Broiler Plate.
