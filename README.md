@@ -1,3 +1,3 @@
-# React Projects
+# Expense Tracker
 
-Some are Learning Tutorial Projects &amp; Some are My Personal Projects
+An Expense Tracker created using React
