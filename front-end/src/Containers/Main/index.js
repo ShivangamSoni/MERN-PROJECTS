@@ -9,11 +9,11 @@ import Cart from "../../Pages/Cart";
 const Main = () => {
   return (
     <main>
-      {/* <Home /> */}
-      {/* <ProductList /> */}
-      {/* <Product /> */}
-      {/* <Register /> */}
-      {/* <Login /> */}
+      <Home />
+      <ProductList />
+      <Product />
+      <Register />
+      <Login />
       <Cart />
     </main>
   );

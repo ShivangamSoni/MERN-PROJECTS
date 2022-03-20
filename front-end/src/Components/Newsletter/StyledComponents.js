@@ -12,6 +12,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   row-gap: 20px;
+  padding: 5px;
 `;
 
 export const Title = styled.h1`

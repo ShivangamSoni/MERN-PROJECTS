@@ -1,7 +1,17 @@
+// Responsive Mixin
+import { responsive } from "../../Common/StyledComponents";
+
+// Styled Component Library
 import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 20px;
+  ${responsive(
+    {
+      padding: "10px",
+    },
+    "750px",
+  )}
 `;
 
 export const Title = styled.h1`
@@ -14,7 +24,15 @@ export const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 20px;
+
+  ${responsive(
+    {
+      rowGap: "10px",
+    },
+    "500px",
+  )}
 `;
 
 export const TopTextWrapper = styled.div`
@@ -22,6 +40,13 @@ export const TopTextWrapper = styled.div`
   align-items: baseline;
   justify-content: space-between;
   column-gap: 20px;
+
+  ${responsive(
+    {
+      display: "none",
+    },
+    "700px",
+  )}
 `;
 
 export const TopText = styled.span`
@@ -71,6 +96,13 @@ export const TopButton = styled.button`
   &:hover::after {
     background-position: 100% 0;
   }
+
+  ${responsive(
+    {
+      width: "100%",
+    },
+    "400px",
+  )}
 `;
 
 // Bottom Section
@@ -78,6 +110,14 @@ export const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 20px;
+
+  ${responsive(
+    {
+      flexFlow: "column nowrap",
+      rowGap: "10px",
+    },
+    "900px",
+  )}
 `;
 
 // Info Section
@@ -88,6 +128,14 @@ export const Info = styled.div`
 export const Product = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${responsive(
+    {
+      flexFlow: "column nowrap",
+      rowGap: "5px",
+    },
+    "600px",
+  )}
 `;
 
 export const ProductDetail = styled.div`
@@ -132,6 +180,13 @@ export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
   column-gap: 5px;
+
+  ${responsive(
+    {
+      columnGap: "15px",
+    },
+    "600px",
+  )}
 `;
 
 export const QuantityIcon = styled.div`
@@ -150,6 +205,13 @@ export const Quantity = styled.span`
 export const Price = styled.span`
   font-size: 30px;
   font-weight: 200;
+
+  ${responsive(
+    {
+      marginBottom: "20px",
+    },
+    "600px",
+  )}
 `;
 
 export const Hr = styled.hr`
@@ -197,7 +259,7 @@ export const Button = styled.button`
   cursor: pointer;
   position: relative;
   isolation: isolate;
-  transition: color 500ms ease-in-out;
+  transition: color 700ms ease-in-out;
 
   &:hover {
     color: #fff;
@@ -214,7 +276,7 @@ export const Button = styled.button`
     background-image: linear-gradient(to right, transparent 0%, transparent 50%, #333 51%, #333 100%);
     background-size: 300% 100%;
     background-position: 0 0;
-    transition: background-position 300ms ease-in-out;
+    transition: background-position 500ms linear;
   }
 
   &:hover::after {

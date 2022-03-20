@@ -11,6 +11,9 @@ I've Divided the entire Project into Components, Pages & Containers:
 - [Home](./front-end/src/Pages/Home/index.js)
 - [ProductList](./front-end/src/Pages/ProductList/index.js)
 - [Product](./front-end/src/Pages/Product/index.js)
+- [Register](./front-end/src/Pages/Register/index.js)
+- [Login](./front-end/src/Pages/Login/index.js)
+- [Cart](./front-end/src/Pages/Cart/index.js)
 
 ### Containers
 
