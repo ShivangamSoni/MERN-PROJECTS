@@ -8,6 +8,7 @@ export const FilterContainer = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  flex-flow: row wrap;
 `;
 
 export const Filter = styled.div`

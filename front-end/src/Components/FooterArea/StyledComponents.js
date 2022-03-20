@@ -1,8 +1,19 @@
+// Responsive Mixin
+import { responsive } from "../../Common/StyledComponents";
+
+// Styled Component Library
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  ${responsive(
+    {
+      gridTemplateColumns: "auto",
+    },
+    "700px",
+  )}
 `;
 
 // Left Section

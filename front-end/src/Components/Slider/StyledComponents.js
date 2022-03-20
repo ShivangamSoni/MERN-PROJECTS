@@ -1,3 +1,7 @@
+// Responsive Mixin
+import { responsive } from "../../Common/StyledComponents";
+
+// Styled Component Library
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -11,7 +15,6 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  align-items: center;
   transform: translateX(-${({ slideIndex }) => slideIndex * 100}vw);
   transition: transform 1000ms ease-in-out;
 `;
@@ -22,8 +25,16 @@ export const Slide = styled.div`
   width: 100vw;
   display: grid;
   grid-template-columns: 60% 40%;
-  align-items: center;
   background-color: #${({ bg }) => bg};
+
+  ${responsive(
+    {
+      gridTemplateColumns: "auto",
+      gridTemplateRows: "50% 50%",
+      rowGap: "30px",
+    },
+    "900px",
+  )}
 `;
 
 export const ImageContainer = styled.div`
@@ -32,10 +43,12 @@ export const ImageContainer = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 `;
 
 export const Image = styled.img`
-  height: 80%;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 `;
@@ -43,19 +56,46 @@ export const Image = styled.img`
 export const InfoContainer = styled.div`
   flex: 1;
   padding: 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  row-gap: 50px;
+
+  ${responsive(
+    {
+      padding: "10px",
+      alignItems: "stretch",
+      rowGap: "30px",
+    },
+    "900px",
+  )}
 `;
 
 export const Title = styled.h1`
   font-size: 70px;
   text-transform: uppercase;
+
+  ${responsive(
+    {
+      fontSize: "50px",
+    },
+    "900px",
+  )}
 `;
 
 export const Desc = styled.p`
-  margin: 50px 0;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  ${responsive(
+    {
+      fontSize: "16px",
+    },
+    "900px",
+  )}
 `;
 
 export const Button = styled.button`

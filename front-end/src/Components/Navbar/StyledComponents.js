@@ -1,14 +1,31 @@
+// Responsive Mixin
+import { responsive } from "../../Common/StyledComponents";
+
+// Styled Component Library
 import styled, { css } from "styled-components";
 
-// Styled Component
 export const Container = styled.nav`
   height: 60px;
+
+  ${responsive(
+    {
+      height: "40px",
+    },
+    "700px",
+  )}
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+
+  ${responsive(
+    {
+      padding: "10px",
+    },
+    "700px",
+  )}
 `;
 
 // Base Style for Left, Right & Center
@@ -21,6 +38,13 @@ const baseSectionStyle = css`
 // Left Components:
 export const Left = styled.div`
   ${baseSectionStyle}
+
+  ${responsive(
+    {
+      display: "none",
+    },
+    "700px",
+  )}
 `;
 
 export const Language = styled.span`
@@ -50,6 +74,13 @@ export const Input = styled.input`
 export const Center = styled.div`
   ${baseSectionStyle}
   justify-content: center;
+
+  ${responsive(
+    {
+      justifyContent: "flex-start",
+    },
+    "700px",
+  )}
 `;
 
 export const Logo = styled.h1`
@@ -61,6 +92,13 @@ export const Right = styled.div`
   ${baseSectionStyle}
   justify-content: flex-end;
   column-gap: 25px;
+
+  ${responsive(
+    {
+      columnGap: "10px",
+    },
+    "700px",
+  )}
 `;
 
 export const MenuItem = styled.a`

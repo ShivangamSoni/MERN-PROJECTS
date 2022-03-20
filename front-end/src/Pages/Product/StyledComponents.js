@@ -1,9 +1,24 @@
+// Responsive Mixin
+import { responsive } from "../../Common/StyledComponents";
+
+// Styled Component Library
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 50px;
   padding: 50px;
+
+  ${responsive(
+    {
+      gridTemplateColumns: "auto",
+      padding: "20px",
+      columnGap: "0",
+      rowGap: "5px",
+    },
+    "700px",
+  )}
 `;
 
 export const ImgContainer = styled.div``;
@@ -12,13 +27,20 @@ export const Img = styled.img`
   width: 100%;
   height: 90vh;
   object-fit: contain;
+
+  ${responsive(
+    {
+      height: "80%",
+    },
+    "700px",
+  )}
 `;
 
 export const InfoContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   row-gap: 15px;
-  padding: 0 50px;
 `;
 
 export const Title = styled.h2`
