@@ -1,7 +1,7 @@
-// Components
-import Slider from "../../Components/Slider";
-import Categories from "../../Components/Categories";
-import ProductsListing from "../../Components/ProductsListing";
+// Containers
+import Slider from "../../Containers/Slider";
+import Categories from "../../Containers/Categories";
+import ProductsListing from "../../Containers/ProductsListing";
 
 const Home = () => {
   return (

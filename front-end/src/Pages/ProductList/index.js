@@ -1,8 +1,8 @@
 // Styled Components
 import { Title, FilterContainer, Filter, FilterText, Select, Option } from "./StyledComponents";
 
-// Components
-import ProductsListing from "../../Components/ProductsListing";
+// Containers
+import ProductsListing from "../../Containers/ProductsListing";
 
 const ProductList = () => {
   return (

@@ -6,7 +6,10 @@ import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutl
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
 // Styled Components
-import { Container, Arrow, Wrapper, Slide, ImageContainer, InfoContainer, Image, Title, Desc, Button } from "./StyledComponents";
+import { Container, Wrapper, Arrow } from "./StyledComponents";
+
+// Components
+import SliderItem from "../../Components/SliderItem";
 
 // Static Data
 import Slides from "./data";
@@ -39,17 +42,7 @@ const Slider = () => {
 
       <Wrapper slideIndex={slideIndex}>
         {Slides.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
-            <ImageContainer>
-              <Image src={item.src} />
-            </ImageContainer>
-
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Desc>{item.desc}</Desc>
-              <Button>Shop Now</Button>
-            </InfoContainer>
-          </Slide>
+          <SliderItem key={item.id} item={item} />
         ))}
       </Wrapper>
 

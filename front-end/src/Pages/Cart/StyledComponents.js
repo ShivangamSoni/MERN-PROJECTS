@@ -1,6 +1,9 @@
 // Responsive Mixin
 import { responsive } from "../../Common/StyledComponents";
 
+// Common Button Styling
+import { buttonStyling } from "../../Common/StyledComponents";
+
 // Styled Component Library
 import styled from "styled-components";
 
@@ -56,31 +59,18 @@ export const TopText = styled.span`
 `;
 
 export const TopButton = styled.button`
-  appearance: none;
-  border: none;
-  outline: ${({ type }) => (type === "filled" ? "none" : "2px solid #000")};
+  ${buttonStyling}
+
+  outline: ${({ type }) => (type === "filled" ? "none" : "2px solid #333")};
   background-color: ${({ type }) => (type === "filled" ? "#333" : "transparent")};
   color: ${({ type }) => (type === "filled" ? "#fff" : "#333")};
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 0.5em 1.5em;
-  cursor: pointer;
-  position: relative;
-  isolation: isolate;
-  transition: color 500ms ease-in-out;
 
   &:hover {
     color: ${({ type }) => (type === "filled" ? "#333" : "#fff")};
+    outline: ${({ type }) => type === "filled" && "2px solid #333"};
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
     background-image: linear-gradient(
       to right,
       transparent 0%,
@@ -88,13 +78,6 @@ export const TopButton = styled.button`
       ${({ type }) => (type === "filled" ? "#fff" : "#333")} 51%,
       ${({ type }) => (type === "filled" ? "#fff" : "#333")} 100%
     );
-    background-size: 300% 100%;
-    background-position: 0 0;
-    transition: background-position 300ms ease-in-out;
-  }
-
-  &:hover::after {
-    background-position: 100% 0;
   }
 
   ${responsive(
@@ -248,38 +231,7 @@ export const SummaryItemText = styled.span``;
 export const SummaryItemPrice = styled.span``;
 
 export const Button = styled.button`
-  appearance: none;
-  border: none;
-  outline: 2px solid #000;
-  background-color: #fff;
-  color: #333;
-  font-weight: 600;
-  text-transform: uppercase;
+  ${buttonStyling}
+
   padding: 0.8em 2em;
-  cursor: pointer;
-  position: relative;
-  isolation: isolate;
-  transition: color 700ms ease-in-out;
-
-  &:hover {
-    color: #fff;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to right, transparent 0%, transparent 50%, #333 51%, #333 100%);
-    background-size: 300% 100%;
-    background-position: 0 0;
-    transition: background-position 500ms linear;
-  }
-
-  &:hover::after {
-    background-position: 100% 0;
-  }
 `;

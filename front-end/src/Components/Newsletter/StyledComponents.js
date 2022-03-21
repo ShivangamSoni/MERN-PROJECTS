@@ -1,6 +1,9 @@
 // Responsive Mixin
 import { responsive } from "../../Common/StyledComponents";
 
+// Common Button Styling
+import { buttonStyling } from "../../Common/StyledComponents";
+
 // Styled Component Library
 import styled from "styled-components";
 
@@ -49,13 +52,11 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  appearance: none;
-  border: none;
+  ${buttonStyling}
+
   outline: 2px solid currentColor;
   background-color: teal;
   color: #fff;
-  cursor: pointer;
-  transition: all 300ms linear;
 
   &:hover {
     outline-offset: -0.3em;

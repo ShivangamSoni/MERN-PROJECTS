@@ -2,7 +2,7 @@
 import { Container } from "./StyledComponents";
 
 // Components
-import CategoryItem from "../CategoryItem";
+import CategoryItem from "../../Components/CategoryItem";
 
 // Static Data
 import CategoriesList from "./data";

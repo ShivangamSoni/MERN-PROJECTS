@@ -1,6 +1,9 @@
 // Responsive Mixin
 import { responsive } from "../../Common/StyledComponents";
 
+// Common Button Styling
+import { buttonStyling } from "../../Common/StyledComponents";
+
 // Styled Component Library
 import styled from "styled-components";
 
@@ -69,39 +72,14 @@ export const Agreement = styled.span`
 `;
 
 export const Button = styled.button`
-  appearance: none;
-  border: none;
-  outline: 2px solid #000;
-  background-color: #fff;
-  font-size: 14px;
-  color: #333;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 0.7em 3em;
-  cursor: pointer;
-  position: relative;
-  isolation: isolate;
-  transition: color 500ms ease-in-out;
+  ${buttonStyling}
 
-  &:hover {
-    color: #fff;
-  }
+  font-size: 14px;
+  padding: 0.7em 3em;
+  outline: 2px solid #000;
+  color: #000;
 
   &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
     background-image: linear-gradient(to right, transparent 0%, transparent 50%, #000 51%, #000 100%);
-    background-size: 210% 100%;
-    background-position: 0 0;
-    transition: background-position 300ms ease-in-out;
-  }
-
-  &:hover::after {
-    background-position: 100% 0;
   }
 `;

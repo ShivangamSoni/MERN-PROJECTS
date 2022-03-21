@@ -2,7 +2,7 @@
 import { Container } from "./StyledComponents";
 
 // Components
-import ProductItem from "../ProductItem";
+import ProductItem from "../../Components/ProductItem";
 
 // Static Data
 import ProductsList from "./data";
