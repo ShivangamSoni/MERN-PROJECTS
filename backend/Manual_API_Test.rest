@@ -3,7 +3,27 @@ POST http://localhost:5000/api/v1/auth/register/
 Content-Type: application/json
 
 {
+    "firstname": "Shivangam",
+    "lastname": "Soni",
     "username": "Shivi",
     "email": "shivangamsoni99@gmail.com",
     "password": "Test@99"
+}
+
+### Auth: Login
+POST http://localhost:5000/api/v1/auth/login/
+Content-Type: application/json
+
+{
+    "username": "Shivi",
+    "password": "Test@99"
+}
+
+### User Update
+PUT http://localhost:5000/api/v1/user/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzk2YTQyNTE2Yjg2Y2ZlODVkY2NmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDc5NDI2OTIsImV4cCI6MTY0ODIwMTg5Mn0.krWrDuaWJqFOFCS-xVfKkBhLnm2B77JtEoEO84I6QzI
+Content-Type: application/json
+
+{
+    "username": "Shivi"
 }
