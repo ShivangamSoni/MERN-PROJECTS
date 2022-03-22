@@ -1,4 +1,6 @@
 import express from "express";
+
+// Routes
 import AuthRoute from "./Routes/Auth.js";
 import UserRoute from "./Routes/User.js";
 import ProductRoute from "./Routes/Product.js";

@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 
 // Express APP
-import app from "./express.js";
+import app from "./Express/index.js";
 
 // To use environment files for accessing sensitive information
 dotenv.config();

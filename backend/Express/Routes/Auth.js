@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 // User Model
-import User from "../Models/User.js";
+import User from "../../Models/User.js";
 
 const auth = Router();
 
