@@ -6,6 +6,7 @@ import UserRoute from "./Routes/User.js";
 import ProductRoute from "./Routes/Product.js";
 import CartRoute from "./Routes/Cart.js";
 import OrderRoute from "./Routes/Order.js";
+import StripeRoute from "./Routes/Stripe.js";
 
 // Express APP
 const app = express();
@@ -47,5 +48,12 @@ app.use("/api/v1/cart/", CartRoute);
  * @description Router for all Order APIs
  */
 app.use("/api/v1/order/", OrderRoute);
+
+/**
+ * @name StripeRoute
+ * @listens /api/v1/stripe/
+ * @description Route for ALl Stripe Payment APIs
+ */
+app.use("/api/v1/stripe/", StripeRoute);
 
 export default app;
