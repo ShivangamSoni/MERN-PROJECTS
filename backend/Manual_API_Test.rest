@@ -15,15 +15,83 @@ POST http://localhost:5000/api/v1/auth/login/
 Content-Type: application/json
 
 {
-    "username": "Shivi",
+    "username": "AdminUser",
     "password": "Test@99"
 }
 
+### GET
+GET http://localhost:5000/api/v1/user/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5M2UxN2U4YTgxODc0OGYzOWFhNyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDkyNTEzMDIsImV4cCI6MTY0OTUxMDUwMn0.ZANmjYulASNxD1vh-MJFS1DPSy8kNp5q7I1N2Kv04gw
+
+### GET ADMIN
+GET http://localhost:5000/api/v1/user/624d93e17e8a818748f39aa7
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+
+### GET ALL Users
+GET http://localhost:5000/api/v1/user/all
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+
+### GET User Stats
+GET http://localhost:5000/api/v1/user/stats
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+
+
 ### User Update
 PUT http://localhost:5000/api/v1/user/
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzk2YTQyNTE2Yjg2Y2ZlODVkY2NmMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDc5NDI2OTIsImV4cCI6MTY0ODIwMTg5Mn0.krWrDuaWJqFOFCS-xVfKkBhLnm2B77JtEoEO84I6QzI
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ4YTI0OTRiZDkwNDkzNmJhY2VlNiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDkyNDg4MjIsImV4cCI6MTY0OTUwODAyMn0.4udE0SJJb_ffOpEf287FLWjXpuphK6sdB_o_3Gtc6P8
 Content-Type: application/json
 
 {
-    "username": "Shivi"
+    "username": "ShivangamSoni"
+}
+
+### User Update ADMIN
+PUT http://localhost:5000/api/v1/user/624d93e17e8a818748f39aa7
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+Content-Type: application/json
+
+{
+    "username": "ShivangamSoni"
+}
+
+### Delete
+DELETE http://localhost:5000/api/v1/user/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ4YTI0OTRiZDkwNDkzNmJhY2VlNiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDkyNDg4MjIsImV4cCI6MTY0OTUwODAyMn0.4udE0SJJb_ffOpEf287FLWjXpuphK6sdB_o_3Gtc6P8
+
+
+### Delete
+DELETE http://localhost:5000/api/v1/user/624d93e17e8a818748f39aa7
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+
+### GET All Product
+GET http://localhost:5000/api/v1/product/all
+
+### GET All Product & Filter One Category
+GET http://localhost:5000/api/v1/product/all?category=levis
+
+### GET Product By ID
+GET http://localhost:5000/api/v1/product/624da667df051ce8230d3774
+
+### Product CREATE
+POST http://localhost:5000/api/v1/product/
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+Content-Type: application/json
+
+{
+    "title": "T-Shirt Levis",
+    "description": "test",
+    "category": ["Clothes", "t-shirt", "man"],
+    "img": "test",
+    "price": 200,
+    "size": "L",
+    "color": "grey"
+}
+
+### Product Update
+PUT http://localhost:5000/api/v1/product/624da667df051ce8230d3774
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNGQ5NGM4N2U4YTgxODc0OGYzOWFhZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0OTI1MTYwOSwiZXhwIjoxNjQ5NTEwODA5fQ.If-QkR1OioXQWJR2-W87QNmgi3tiYNAAG8hDpPQ5cWA
+Content-Type: application/json
+
+{
+    "category": ["Clothes", "t-shirt", "man", "levis"]
 }
